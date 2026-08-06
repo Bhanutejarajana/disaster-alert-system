@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Alert System</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main-container">
+    
+    <!-- ===================== NAVBAR ===================== -->
+    <div class="navbar">
+        <h1>Disaster Alert System</h1>
+
+        <div class="nav-right">
+            <span id="welcomeUser"></span>
+            <span class="status">● System Active</span>
+            <div id="clock"></div>
+            <button onclick="logout()" class="logout-btn">
+                Logout
+            </button>
+
+        </div>
+    </div>
+
+    <!-- ===================== CONTENT ===================== -->
+    <div class="content">
+
+        <!-- ===================== SIDEBAR ===================== -->
+        <div class="sidebar">
+
+    <h2>⚠ Disaster Monitor</h2>
+
+    <!-- LIVE ALERT LIST ONLY -->
+    <h3>Live Alerts</h3>
+    <div class="sidebar-list"></div>
+
+  
+    <div class="filter-buttons">
+
+        <button id="allFilter">All</button>
+
+        <button id="criticalFilter">Critical</button>
+
+        <button id="HighFilter">High</button>
+
+        <button id="mediumFilter">medium</button>
+
+        <button id="lowFilter">low</button>
+
+    </div>
+    
+    <!-- STATS -->
+    <div class="sidebar-stats">
+        <p>Total Alerts: <span>0</span></p>
+        <p>Critical Alerts: <span>0</span></p>
+        <p>Safe Zones: <span>12</span></p>
+    </div>
+
+    
+
+</div>
+
+        <!-- ===================== MAP ===================== -->
+        <div id="map"></div>
+
+    </div>
+
+</div>
+
+<!-- Notification Box -->
+<div id="notification" class="notification">
+    <h3>🚨 New Disaster Alert</h3>
+
+    <p id="notifyType"></p>
+
+    <p id="notifyLocation"></p>
+
+    <p id="notifySeverity"></p>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Your JS -->
+<script src="user.js"></script>
+
+</body>
+</html>
