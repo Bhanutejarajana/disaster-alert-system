@@ -69,12 +69,14 @@ STATE_MAP = {
     "Siddharthanagar": "Uttar Pradesh"
 }
 
+import os
+
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Bhanu@1827",
-    port="3306",
-    database="disaster_alert_db"
+    host=os.getenv("MYSQL_HOST", "localhost"),
+    port=int(os.getenv("MYSQL_PORT", 3306)),
+    user=os.getenv("MYSQL_USER", "root"),
+    password=os.getenv("MYSQL_PASSWORD", "Bhanu@1827"),
+    database=os.getenv("MYSQL_DATABASE", "disaster_alert_db")
 )
 
 cursor = db.cursor(dictionary=True)
