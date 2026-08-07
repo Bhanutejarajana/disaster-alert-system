@@ -225,11 +225,9 @@ def register():
     hashed_password = generate_password_hash(password)
 
     # Default role
-    if username.lower() == "admin":
-        role = "admin"
-    else:
-        role = "user"
-        
+
+    role = "user"
+
     db.reconnect()
     cursor = db.cursor(dictionary=True)
 
