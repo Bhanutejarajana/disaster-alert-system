@@ -160,7 +160,7 @@ setInterval(updateClock, 1000);
 // ===============================
 function refreshUI() {
 
-    fetch("http://127.0.0.1:5000/alerts")
+    fetch("https://disaster-alert-system-yqp3.onrender.com/alerts")
         .then(res => res.json())
         .then(data => {
 
@@ -277,7 +277,7 @@ if (addBtn) {
             return;
         }
 
-        fetch("http://127.0.0.1:5000/alerts", {
+        fetch("https://disaster-alert-system-yqp3.onrender.com/alerts", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -298,7 +298,7 @@ if (addBtn) {
 
 function deleteAlert(id) {
 
-    fetch(`http://127.0.0.1:5000/alerts/${id}`, {
+    fetch(`https://disaster-alert-system-yqp3.onrender.com/alerts/${id}`, {
         method: "DELETE"
     })
     .then(res => res.json())

@@ -14,7 +14,7 @@ function register() {
         return;
     }
 
-    fetch("http://127.0.0.1:5000/register", {
+    fetch("https://disaster-alert-system-yqp3.onrender.com/register", {
 
         method: "POST",
 

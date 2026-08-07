@@ -3,7 +3,7 @@ function login() {
     const username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value;
 
-    fetch("http://127.0.0.1:5000/login", {
+    fetch("https://disaster-alert-system-yqp3.onrender.com/login", {
 
         method: "POST",
 

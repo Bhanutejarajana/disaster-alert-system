@@ -172,7 +172,7 @@ setInterval(updateClock, 1000);
 // ===============================
 function refreshUI() {
 
-    fetch("http://127.0.0.1:5000/alerts")
+    fetch("https://disaster-alert-system-yqp3.onrender.com/alerts")
         .then(res => res.json())
         .then(data => {
 
