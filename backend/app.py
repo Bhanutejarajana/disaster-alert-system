@@ -10,13 +10,14 @@ from ndma_sync import sync_ndma_alerts
 from werkzeug.security import generate_password_hash, check_password_hash
 
 import os
+import mysql.connector
 
 db = mysql.connector.connect(
-    host=os.getenv("MYSQLHOST", "localhost"),
-    user=os.getenv("MYSQLUSER", "root"),
-    password=os.getenv("MYSQLPASSWORD", "Bhanu@1827"),
-    database=os.getenv("MYSQLDATABASE", "disaster_alert_db"),
-    port=int(os.getenv("MYSQLPORT", 3306))
+    host=os.getenv("MYSQL_HOST", "localhost"),
+    port=int(os.getenv("MYSQL_PORT", "3306")),
+    user=os.getenv("MYSQL_USER", "root"),
+    password=os.getenv("MYSQL_PASSWORD", "Bhanu@1827"),
+    database=os.getenv("MYSQL_DATABASE", "disaster_alert_db")
 )
 
 # TEST CONNECTION
