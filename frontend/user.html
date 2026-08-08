@@ -18,6 +18,9 @@
     
     <!-- ===================== NAVBAR ===================== -->
     <div class="navbar">
+
+        <button id="menuBtn" class="menu-btn">☰</button>
+
         <h1>Disaster Alert System</h1>
 
         <div class="nav-right">
@@ -34,10 +37,12 @@
     <!-- ===================== CONTENT ===================== -->
     <div class="content">
 
-        <!-- ===================== SIDEBAR ===================== -->
-        <div class="sidebar">
+    <!-- ===================== SIDEBAR ===================== -->
+    <div class="sidebar">
 
-    <h2>⚠ Disaster Monitor</h2>
+        <button id="closeMenuBtn" class="close-menu-btn">✕</button>
+
+        <h2>⚠ Disaster Monitor</h2>
 
     <!-- LIVE ALERT LIST ONLY -->
     <h3>Live Alerts</h3>
@@ -77,14 +82,18 @@
 </div>
 
 <!-- Notification Box -->
-<div id="notification" class="notification">
-    <h3>🚨 New Disaster Alert</h3>
+<div class="notification" id="notification">
+
+    <button class="notification-close" id="notificationClose">
+        ✕
+    </button>
+
+    <h3>New Alert</h3>
 
     <p id="notifyType"></p>
-
     <p id="notifyLocation"></p>
-
     <p id="notifySeverity"></p>
+
 </div>
 
 <!-- Leaflet JS -->

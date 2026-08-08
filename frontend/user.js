@@ -387,3 +387,24 @@ refreshUI();
 
 setInterval(refreshUI, 5000);
 
+const menuBtn = document.getElementById("menuBtn");
+const closeMenuBtn = document.getElementById("closeMenuBtn");
+const sidebar = document.querySelector(".sidebar");
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.add("open");
+});
+
+closeMenuBtn.addEventListener("click", () => {
+    sidebar.classList.remove("open");
+});
+
+const notificationClose =
+    document.getElementById("notificationClose");
+
+if (notificationClose) {
+    notificationClose.addEventListener("click", () => {
+        document.getElementById("notification")
+            .classList.remove("show");
+    });
+}
